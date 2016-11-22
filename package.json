@@ -1,0 +1,21 @@
+{
+  "name": "miniweb",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-babel": "^6.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "jeet": "^7.0.0",
+    "nib": "^1.1.2",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "inst": "npm install -S stylus jeet nib gulp-uglify gulp-rename gulp-stylus gulp-babel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CCTVNEWS-Fex",
+  "license": "ISC"
+}
