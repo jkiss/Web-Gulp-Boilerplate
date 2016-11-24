@@ -2,7 +2,7 @@
  * @Author: Nokey 
  * @Date: 2016-11-21 22:32:04 
  * @Last Modified by: Nokey
- * @Last Modified time: 2016-11-22 15:34:18
+ * @Last Modified time: 2016-11-24 14:33:29
  */ 
 ;
 
@@ -12,7 +12,7 @@
   var _win = $(win),
       _win_height = _win.height(),
       _win_width = _win.width(),
-      _ua = win.navigator.userAgent.toLowerCase();
+      _ua = win.navigator.userAgent.toLowerCase(),
       _isMac = /macintosh|mac os x/.test(_ua),
       _isIphone = /iphone/.test(_ua),
       _isIpad = /ipad/.test(_ua),
