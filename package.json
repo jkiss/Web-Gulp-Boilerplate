@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "inst": "npm install -S stylus jeet nib gulp-uglify gulp-rename gulp-stylus gulp-babel babel-preset-es2015",
+    "inst": "npm i -S stylus jeet nib gulp-uglify gulp-rename gulp-stylus gulp-babel gulp-concat babel-preset-es2015",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "CCTVNEWS-Fex",

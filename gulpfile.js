@@ -2,7 +2,7 @@
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
  * @Last Modified by: Nokey
- * @Last Modified time: 2016-11-22 16:11:01
+ * @Last Modified time: 2016-11-24 16:07:57
  */
 'use strict'; 
 
@@ -11,9 +11,11 @@ const babel = require('gulp-babel');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const stylus = require('gulp-stylus');
+const concat = require('gulp-concat');
 
 gulp.task('es6', ()=>
     gulp.src('./src/scripts/*.js')
+        .pipe(concat('all.js'))
         .pipe(babel({
             presets: ['es2015']
         }))
@@ -25,7 +27,6 @@ gulp.task('es6', ()=>
 gulp.task('stylus', ()=>
     gulp.src('./src/stylus/*.styl')
         .pipe(stylus())
-        .pipe(rename('X.min.css'))
         .pipe(gulp.dest('./build/styles'))
 );
 
