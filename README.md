@@ -2,13 +2,6 @@
 
 > 最基本的 Web 项目工程目录，使项目更加统一，便于协作，可根据自身的需求添加、删除部分文件；大家共同提意见完善哈。
 
-### 使用步骤：
-
-```javascript
-  cd Web-Template/
-  npm run inst
-```
-
 ### 前端兼容性查询：
 
 1. [Can I Use](http://caniuse.com/)；
