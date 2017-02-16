@@ -1,8 +1,8 @@
 /*
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
- * @Last Modified by:   Nokey
- * @Last Modified time: 2017-02-06 20:26:33
+ * @Last Modified by: Nokey
+ * @Last Modified time: 2017-02-16 21:40:41
  */
 'use strict'; 
 
@@ -129,16 +129,20 @@ gulp.task('imgmin', ()=>{
  */
 gulp.task('static', ()=>{
     gulp.src('./src/scripts/plugins/**/*')
-        .pipe(gulp.dest('./build/scripts/plugins'));
+        .pipe(gulp.dest('./build/scripts/plugins'))
+        .pipe(connect.reload());
 
     gulp.src('./src/videos/**/*')
-        .pipe(gulp.dest('./build/videos'));
+        .pipe(gulp.dest('./build/videos'))
+        .pipe(connect.reload());
 
     gulp.src('./src/stylus/fonts/**/*')
-        .pipe(gulp.dest('./build/styles/fonts'));
+        .pipe(gulp.dest('./build/styles/fonts'))
+        .pipe(connect.reload());
 
     gulp.src('./favicon.png')
-        .pipe(gulp.dest('./build'));
+        .pipe(gulp.dest('./build'))
+        .pipe(connect.reload());
 });
 
 /**
