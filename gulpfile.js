@@ -2,7 +2,7 @@
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
  * @Last Modified by: Nokey
- * @Last Modified time: 2017-02-16 21:40:41
+ * @Last Modified time: 2017-02-17 01:05:30
  */
 'use strict'; 
 
@@ -11,6 +11,7 @@ var gulp        = require('gulp'),
     rename      = require('gulp-rename'),
     uglify      = require('gulp-uglify'),
     imagemin    = require('gulp-imagemin'),
+    imageminJpegRecompress = require('imagemin-jpeg-recompress'),
     stylus      = require('gulp-stylus'),
     concat      = require('gulp-concat'),
     plumber     = require('gulp-plumber'),
@@ -118,9 +119,9 @@ gulp.task('stylus', ()=>{
  */
 gulp.task('imgmin', ()=>{
     gulp.src('./src/images/**/*')
-        .pipe(imagemin({
-            // verbose: true
-        }))
+        .pipe(imagemin([
+            imageminJpegRecompress()
+        ]))
         .pipe(gulp.dest('./build/images'));
 });
 
