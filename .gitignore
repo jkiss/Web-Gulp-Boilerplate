@@ -4,6 +4,7 @@ node_modules/
 # 忽略mac隐藏文件
 .DS_Store
 .git/
+.vscode/
 
 # 忽略 npm log
 npm-debug.log
