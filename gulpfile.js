@@ -2,26 +2,27 @@
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
  * @Last Modified by: Nokey
- * @Last Modified time: 2017-02-17 01:05:30
+ * @Last Modified time: 2017-03-09 17:53:51
  */
 'use strict'; 
 
-var gulp        = require('gulp'),
-    babel       = require('gulp-babel'),
-    rename      = require('gulp-rename'),
-    uglify      = require('gulp-uglify'),
-    imagemin    = require('gulp-imagemin'),
+var gulp                   = require('gulp'),
+    babel                  = require('gulp-babel'),
+    rename                 = require('gulp-rename'),
+    uglify                 = require('gulp-uglify'),
+    imagemin               = require('gulp-imagemin'),
     imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-    stylus      = require('gulp-stylus'),
-    concat      = require('gulp-concat'),
-    plumber     = require('gulp-plumber'),
-    del         = require('del'),
-    sourcemaps  = require('gulp-sourcemaps'),
-    rev         = require('gulp-rev'),
-    revFormat   = require('gulp-rev-format'),
-    revReplace  = require('gulp-rev-replace'),
-    runSequence = require('run-sequence'),
-    connect     = require('gulp-connect');
+    stylus                 = require('gulp-stylus'),
+    concat                 = require('gulp-concat'),
+    plumber                = require('gulp-plumber'),
+    del                    = require('del'),
+    sourcemaps             = require('gulp-sourcemaps'),
+    rev                    = require('gulp-rev'),
+    revFormat              = require('gulp-rev-format'),
+    revReplace             = require('gulp-rev-replace'),
+    runSequence            = require('run-sequence'),
+    connect                = require('gulp-connect'),
+    open                   = require('gulp-open');
 
 /**
  * 替换HTML里的链接版本
@@ -167,6 +168,18 @@ gulp.task('server', ()=>{
 });
 
 /**
+ * 打开浏览器
+ */
+gulp.task('open', ()=>{
+    setTimeout(()=>{
+        gulp.src('')
+            .pipe(open({
+                uri: 'http://localhost:8008/'
+            }));
+    }, 3000);
+});
+
+/**
  * 初始化服务
  */
 gulp.task('init', (cb)=>{
@@ -178,6 +191,7 @@ gulp.task('init', (cb)=>{
         ['es6'],
         ['html'],
         ['server'],
+        ['open'],
         cb);
 });
 
