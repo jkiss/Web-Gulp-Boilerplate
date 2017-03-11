@@ -2,7 +2,7 @@
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
  * @Last Modified by: Nokey
- * @Last Modified time: 2017-03-09 17:53:51
+ * @Last Modified time: 2017-03-11 16:20:30
  */
 'use strict'; 
 
@@ -161,7 +161,7 @@ gulp.task('server', ()=>{
     connect.serverClose();
     connect.server({
         root: 'build',
-        port: 8001,
+        port: 8008,
         livereload: true
         // fallback: 'index.html'  // SPA可能需要设置此参数
     });
