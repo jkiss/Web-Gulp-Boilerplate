@@ -58,6 +58,16 @@
   });
 
   /**
+   * Footer
+   */
+  var icon_wechat = $('#icon_wechat'),
+      cctv_qr = $('#cctv_qr');
+
+  icon_wechat.click(function(e){
+      cctv_qr.hasClass('hide') ? cctv_qr.removeClass('hide') : cctv_qr.addClass('hide');
+  });
+
+  /**
    * ES6 example
    */
   class CarouselPoint{

@@ -56,24 +56,61 @@
   </script>
 </head>
 <body>
-  <div id="main_box" class="main-box">
-    <!-- Custom -->
-
-    <!-- Follow Us -->
-    <div class="follow-us-box">
-      <a href="#"><img src="./images/follow-us/Miaopai@2x.png" alt="JPG"></a>
-      <a href="#"><img src="./images/follow-us/Weibo@2x.png" alt="JPG"></a>
-      <img id="wechat_icon" src="./images/follow-us/Wechat@2x.png" alt="JPG">
-      <a href="#"><img src="./images/follow-us/Tumblr@2x.png" alt="JPG"></a>
-      <a href="#"><img src="./images/follow-us/Pin@2x.png" alt="JPG"></a>
-      <a href="#"><img src="./images/follow-us/google-plus@2x.png" alt="JPG"></a>
-      <a href="#"><img src="./images/follow-us/Ins@2x.png" alt="JPG"></a>
-      <a href="#"><img src="./images/follow-us/YouTube@2x.png" alt="JPG"></a>
-      <a href="#"><img src="./images/follow-us/Twitter@2x.png" alt="JPG"></a>
-      <a href="#"><img src="./images/follow-us/Facebook@2x.png" alt="JPG"></a>
-    </div>
-    <div id="wechat_mask" class="wechat-mask none"></div>
+  <!-- Wechat Thumbnail -->
+  <div id="wx_pic" style="margin:0 auto;display:none;">
+      <img src="images/thumb.jpg"/>
   </div>
+
+  <!-- Main -->
+  <header>
+
+  </header>
+
+  <div class="content">
+    
+  </div>
+
+  <footer id="footer">
+      <p class="follow-txt">FOLLOW US@ <span style="color: #bfae62;">CGTN</span> ON：</p>
+      <div class="follow-icons">
+          <a href="//www.cgtn.com/socialmedia/facebook">
+              <span class="icon-fb"></span>
+          </a>
+          <a href="//www.cgtn.com/socialmedia/twitter">
+              <span class="icon-twitter"></span>
+          </a>
+          <a href="//www.cgtn.com/socialmedia/youtube">
+              <span class="icon-youtube"></span>
+          </a>
+          <a href="//www.cgtn.com/socialmedia/instagram">
+              <span class="icon-ins"></span>
+          </a>
+          <a href="//www.cgtn.com/socialmedia/googleplus">
+              <span class="icon-google"></span>
+          </a>
+          <a href="//www.cgtn.com/socialmedia/pinterest">
+              <span class="icon-pin"></span>
+          </a>
+          <a href="//www.cgtn.com/socialmedia/tumblr">
+              <span class="icon-tumblr"></span>
+          </a>
+          <span class="icon-wechat" id="icon_wechat"></span>
+          <a href="//www.cgtn.com/socialmedia/weibo">
+              <span class="icon-wb"></span>
+          </a>
+          <a href="//www.cgtn.com/socialmedia/miaopai">
+              <span class="icon-miaopai"></span>
+          </a>
+          
+          <img id="cctv_qr" class="cctv-qr hide transition" src="images/cv-wechat.jpg" alt="QR">
+      </div>
+      <div class="logo-wrap">
+          <img class="footer-logo" src="images/footer-logo@2x.jpg" alt="Logo">
+      </div>
+      <div class="copy-right">
+          Copyright © 2017 CGTN. Beijing ICP prepared NO.16065310-3
+      </div>
+  </footer>
 
   <!-- Plugins: 插件暂时没有打包到一起，一是打包顺序问题，二是准备建立一个CDN插件库，模块化 -->
   <script src="./scripts/plugins/jquery-1.12.4.min.js"></script>
