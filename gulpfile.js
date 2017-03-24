@@ -2,7 +2,7 @@
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
  * @Last Modified by: Nokey
- * @Last Modified time: 2017-03-11 16:20:30
+ * @Last Modified time: 2017-03-24 16:08:14
  */
 'use strict'; 
 
@@ -121,8 +121,14 @@ gulp.task('stylus', ()=>{
 gulp.task('imgmin', ()=>{
     gulp.src('./src/images/**/*')
         .pipe(imagemin([
-            imageminJpegRecompress()
-        ]))
+            imageminJpegRecompress(),
+            imagemin.optipng(),  // 插件使用前需要安装：imagemin-optipng
+            imagemin.gifsicle(),
+            imagemin.svgo()
+        ],{
+            // verbose: true
+            optimizationLevel: 7
+        }))
         .pipe(gulp.dest('./build/images'));
 });
 
