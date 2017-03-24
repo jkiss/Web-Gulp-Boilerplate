@@ -2,7 +2,7 @@
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
  * @Last Modified by: Nokey
- * @Last Modified time: 2017-03-24 16:08:14
+ * @Last Modified time: 2017-03-24 16:13:42
  */
 'use strict'; 
 
@@ -198,6 +198,20 @@ gulp.task('init', (cb)=>{
         ['html'],
         ['server'],
         ['open'],
+        cb);
+});
+
+/**
+ * Default
+ */
+gulp.task('default', (cb)=>{
+    runSequence(
+        ['clean'],
+        ['static'],
+        ['imgmin'],
+        ['stylus'],
+        ['es6'],
+        ['html'],
         cb);
 });
 
