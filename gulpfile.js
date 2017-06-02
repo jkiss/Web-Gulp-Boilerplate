@@ -2,7 +2,7 @@
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
  * @Last Modified by: Nokey
- * @Last Modified time: 2017-06-02 11:25:14
+ * @Last Modified time: 2017-06-02 11:28:51
  */
 'use strict'; 
 
@@ -201,7 +201,7 @@ gulp.task('dev', (cb)=>{
     runSequence(
         ['clean'],
         ['static'],
-        ['imgmin'],
+        ['moveimg'],
         ['stylus'],
         ['es6'],
         ['html'],
