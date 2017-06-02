@@ -2,7 +2,7 @@
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
  * @Last Modified by: Nokey
- * @Last Modified time: 2017-03-24 16:13:42
+ * @Last Modified time: 2017-06-02 10:49:42
  */
 'use strict'; 
 
@@ -140,8 +140,8 @@ gulp.task('static', ()=>{
         .pipe(gulp.dest('./build/scripts/plugins'))
         .pipe(connect.reload());
 
-    gulp.src('./src/videos/**/*')
-        .pipe(gulp.dest('./build/videos'))
+    gulp.src('./src/media/**/*')
+        .pipe(gulp.dest('./build/media'))
         .pipe(connect.reload());
 
     gulp.src('./src/stylus/fonts/**/*')
