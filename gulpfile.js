@@ -2,7 +2,7 @@
  * @Author: Nokey 
  * @Date: 2016-11-22 15:30:31 
  * @Last Modified by: Nokey
- * @Last Modified time: 2017-06-02 10:49:42
+ * @Last Modified time: 2017-06-02 11:25:14
  */
 'use strict'; 
 
@@ -133,6 +133,15 @@ gulp.task('imgmin', ()=>{
 });
 
 /**
+ * 移动图片
+ */
+gulp.task('moveimg', ()=>{
+    gulp.src('./src/images/**/*')
+        .pipe(gulp.dest('./build/images'))
+        .pipe(connect.reload());
+});
+
+/**
  * 打包静态文件
  */
 gulp.task('static', ()=>{
@@ -188,7 +197,7 @@ gulp.task('open', ()=>{
 /**
  * 初始化服务
  */
-gulp.task('init', (cb)=>{
+gulp.task('dev', (cb)=>{
     runSequence(
         ['clean'],
         ['static'],
@@ -216,14 +225,28 @@ gulp.task('default', (cb)=>{
 });
 
 /**
+ * Build
+ */
+gulp.task('build', (cb)=>{
+    runSequence(
+        ['clean'],
+        ['static'],
+        ['imgmin'],
+        ['stylus'],
+        ['es6'],
+        ['html'],
+        cb);
+});
+
+/**
  * 启动Gulp，开始监听！:)
  */
-gulp.task('watch', ['init'], ()=>{
+gulp.task('watch', ['dev'], ()=>{
     gulp.watch(['./rev/**/*.json', './*.html'], ['html']);
     gulp.watch('./src/scripts/*.js', ['es6']);
     gulp.watch('./src/stylus/*.styl', ['stylus']);
     gulp.watch(['./src/scripts/plugins/**/*', './src/images/**/*'], ['static']);
 
-    // 图片压缩监听任务可能导致内存泄漏
-    gulp.watch('./src/images/**/*', ['imgmin']);
+    // 图片压缩放到build里，提高监听性能
+    gulp.watch('./src/images/**/*', ['moveimg']);
 });
