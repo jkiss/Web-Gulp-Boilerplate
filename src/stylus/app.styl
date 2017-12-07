@@ -1,0 +1,159 @@
+/*
+ * @Author: Mr.B 
+ * @Date: 2017-12-07 17:53:29 
+ * @Last Modified by: Mr.B
+ * @Last Modified time: 2017-12-07 18:02:16
+ */
+
+@import 'nib'
+@import 'custom/reset'
+
+x-reset()
+
+@font-face{
+    font-family: 'cgtn';
+    src: url('fonts/font-name.eot');
+    src: url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+        url('fonts/font-name.woff2') format('woff2'),
+        url('fonts/font-name.woff') format('woff'),
+        url('fonts/font-name.ttf') format('truetype'),
+        url('fonts/font-name.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+abs-center(w, h)
+    position absolute
+    left 50%
+    top 50%
+    width w
+    height h
+    margin-left -1 * (w / 2)
+    margin-top -1 * (h / 2)
+
+/* Header */
+header
+    position relative
+    height 60px
+    background-color #000
+
+/* Content */
+.content
+    position relative
+    width 100%
+    height 100%
+    overflow hidden
+    margin 2rem
+    display flex
+    align-items: center
+    justify-content: center
+
+    video
+        width 800px
+    
+    for n in 2 3 4 5 6
+        .page:nth-child({n})
+            left 16.66% * (n - 1)
+
+
+/* Footer */
+footer
+    margin-top 60px
+
+    .follow-txt
+        font-size 16px
+        color #838487
+        text-align center
+
+    .follow-icons
+        margin-top 30px
+        text-align center
+        position relative
+        z-index 10
+        line-height 40px
+
+    .icon-fb
+        background url(../images/follow-us/Facebook@2x.png) no-repeat
+
+    .icon-google
+        background url(../images/follow-us/Google-plus@2x.png) no-repeat
+
+    .icon-ins
+        background url(../images/follow-us/Ins@2x.png) no-repeat
+
+    .icon-tumblr
+        background url(../images/follow-us/Tumblr@2x.png) no-repeat
+
+    .icon-twitter
+        background url(../images/follow-us/Twitter@2x.png) no-repeat
+
+    .icon-wb
+        background url(../images/follow-us/Weibo@2x.png) no-repeat
+
+    .icon-wechat
+        background url(../images/follow-us/Wechat@2x.png) no-repeat
+        cursor pointer
+
+    .icon-youtube
+        background url(../images/follow-us/YouTube@2x.png) no-repeat
+
+    .icon-miaopai
+        background url(../images/follow-us/Miaopai@2x.png) no-repeat
+
+    .icon-pin
+        background url(../images/follow-us/Pin@2x.png) no-repeat
+
+    .follow-icons span
+        display inline-block
+        width 32px
+        height 32px
+        margin 0 10px
+        background-size 100%
+
+    .cctv-qr
+        position absolute
+        left 50%
+        top 100%
+        width 140px
+        margin-left -70px
+
+    .logo-wrap
+        margin-top 80px
+        border-top 1px solid #dadada
+        position relative
+
+    .footer-logo
+        position absolute
+        left 50%
+        top -20px
+        width 80px
+        margin-left -40px
+
+    .copy-right
+        margin-top 50px
+        height 80px
+        line-height 80px
+        font-size 12px
+        text-align center
+        color #999
+        background-color #202020
+
+
+/* Responsive */
+@media screen and (max-width: 1100px)
+    .page3 .page3-footer .data-source
+        text-align left
+
+
+/* Tool */
+.transition
+    transition opacity .5s, width .5s, height .5s, margin .5s
+
+.transition-1
+    transition opacity 1s
+
+.hide
+    opacity 0
+
+.none
+    display none

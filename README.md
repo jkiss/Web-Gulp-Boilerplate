@@ -2,18 +2,12 @@
 
 > 最基本的 Gulp静态页工作流模版，使项目更加统一，便于协作，可根据自身的需求添加、删除部分文件；大家共同提意见完善哈。
 
-### 使用：
+### 启动项目：
 
-第一次执行：
+```javascript
+npm run dev // development mode
 
-```bash
-npm start
-```
-
-启动项目：
-
-```bash
-npm watch 或者 gulp watch
+npm run build // build deploy folder
 ```
 
 ### 特性：

@@ -8,9 +8,16 @@ node_modules/
 
 # 忽略 npm log
 npm-debug.log
+npm-debug.log.*
 
 # 忽略build文件夹
 build/
 
 # 忽略idea
 .idea/
+
+# Custom
+rev/
+package-lock.json
+*.bkp
+CNAME
