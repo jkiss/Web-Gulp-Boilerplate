@@ -2,6 +2,13 @@
 
 > 最基本的 Gulp静态页工作流模版，使项目更加统一，便于协作，可根据自身的需求添加、删除部分文件；大家共同提意见完善哈。
 
+# Updates：
+
+#### 2017-12-7:
+1. 模块化 gulp 任务；
+2. 将资源统一放到 /src 下面；
+3. 增加 [jquery.scrollto](https://github.com/flesler/jquery.scrollTo)、[ScrollMagic](https://github.com/janpaepke/ScrollMagic) 插件；
+
 ### 启动项目：
 
 ```javascript
