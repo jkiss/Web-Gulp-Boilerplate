@@ -14,7 +14,7 @@ var gulp       = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     plumber    = require('gulp-plumber');
 
-// TODO: bundle js through modules
+// TODO: bundle js through modules by import
 module.exports = ()=>{
     return browserify({
         entries: './src/scripts/app.js'  //指定打包入口文件
