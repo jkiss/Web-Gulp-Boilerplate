@@ -24,7 +24,7 @@ npm run build // build deploy folder
 ### 特性：
 
 1. 可以使用最新的 ES6 语法；
-2. css使用的stylus预编译模版，TJ大神的作品，更偏向于JS语法；
+2. css使用的[stylus](http://stylus-lang.com/)预编译模版，TJ大神的作品，更偏向于JS语法；
 3. html文件里的自定义的js和css文件链接可以自动加版本号：\<script src="bundle.min.js?v=dsf6sk210"\>，解决CDN缓存问题；
 4. 图片压缩，需要配合 imagemin 的插件使用：imageminJpegRecompress（图片链接暂时没加版本号）；
 5. 自动启动本地服务器，自动刷新（Chrome需要安装livereload插件）；
