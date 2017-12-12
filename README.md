@@ -1,6 +1,7 @@
-# Web Template
+# Gulp Web Boilerplate
 
-> 最基本的 Gulp静态页工作流模版，使项目更加统一，便于协作，可根据自身的需求添加、删除部分文件；欢迎来提 Issues。
+> 最基本的 Gulp静态页工作流模版，使项目更加统一，便于协作，可根据自身的需求添加、删除部分功能；
+> 欢迎来提 Issues。
 
 # Updates：
 
