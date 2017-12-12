@@ -1,15 +1,17 @@
 {
-  "name": "CGTN - FEX",
-  "version": "2.0.0",
+  "name": "cgtn-fex",
+  "version": "2.1.0",
   "main": "gulpfile.js",
   "dependencies": {
     "jquery.scrollto": "^2.1.2"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^8.0.0",
     "browserify": "^14.5.0",
     "del": "^2.2.2",
+    "globby": "^7.1.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
@@ -24,12 +26,15 @@
     "gulp-sourcemaps": "2.4.1",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-optipng": "^5.2.1",
     "jeet": "^7.1.0",
     "nib": "^1.1.2",
     "run-sequence": "^1.2.2",
     "stylus": "^0.54.5",
+    "through2": "^2.0.3",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {

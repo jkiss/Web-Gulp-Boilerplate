@@ -1,36 +1,13 @@
 /*
  * @Author: Mr.B 
  * @Date: 2017-11-27 12:17:37 
- * @Last Modified by: Nokey
- * @Last Modified time: 2017-12-03 23:14:27
+ * @Last Modified by: Mr.B
+ * @Last Modified time: 2017-12-12 18:00:08
  */
 'use strict'; 
 
-// rAF poilyfill
-; (function () {
-    var lastTime = 0,
-    vendors = ['webkit', 'moz'];
-    for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
-    }
-    if (!window.requestAnimationFrame){
-        window.requestAnimationFrame = function (callback) {
-            var currTime = new Date().getTime(),
-            timeToCall = Math.max(0, 16 - (currTime - lastTime));
-            var id = window.setTimeout(function () {
-            callback(currTime + timeToCall);
-            }, timeToCall);
-            lastTime = currTime + timeToCall;
-            return id;
-        };
-    }
-    if (!window.cancelAnimationFrame){
-        window.cancelAnimationFrame = function (id) {
-            clearTimeout(id);
-        };
-    }
-} ());
+// Polyfill
+import './modules/pf_RAF'
 
 (function ($, win) {
     /**
@@ -74,6 +51,13 @@
     /**
      * Some Sample Code
      */
+    /********   ES6 modules   *********/
+    // import {f1, Test} from './modules/test'
+    // f1('Mr.B')
+
+    // let test = new Test('Mr.B')
+    // test.myName();
+
     /******   Scroll Magic Sample   *******/
     // var sm_controller = new ScrollMagic.Controller(),
     //     wipe_animation = new TimelineMax()
@@ -117,7 +101,10 @@
     //     <h2>Usage Scenario</h2>
     //     <img src="images/lavender/lavender12.png" alt="Image">`.trim()
 
-    /************   Preload Sample  ***********/
+    /**
+     * 
+     * 
+     */
     function preload() {
         var indexID = 0,
             pre_files = [],

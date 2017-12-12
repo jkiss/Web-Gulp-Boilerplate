@@ -29,7 +29,7 @@ gulp.task('dev', (cb)=>{
         ['static'],
         ['movemedia'],
         ['stylus'],
-        ['es6'],
+        ['browserify'],
         ['html'],
         ['server'],
         ['open'],
@@ -45,7 +45,7 @@ gulp.task('default', (cb)=>{
         ['static'],
         ['imgmin'],
         ['stylus'],
-        ['es6'],
+        ['browserify'],
         ['html'],
         cb);
 });
@@ -59,7 +59,7 @@ gulp.task('build', (cb)=>{
         ['static'],
         ['imgmin'],
         ['stylus'],
-        ['es6'],
+        ['browserify'],
         ['html'],
         cb);
 });
@@ -69,7 +69,7 @@ gulp.task('build', (cb)=>{
  */
 gulp.task('watch', ['dev'], ()=>{
     gulp.watch(['./rev/**/*.json', './src/*.html'], ['html']);
-    gulp.watch('./src/scripts/*.js', ['es6']);
+    gulp.watch('./src/scripts/*.js', ['browserify']);
     gulp.watch('./src/stylus/*.styl', ['stylus']);
     gulp.watch(['./src/scripts/plugins/**/*', './src/media/**/*'], ['static']);
 
