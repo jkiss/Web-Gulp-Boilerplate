@@ -3,7 +3,6 @@
   "version": "2.2.0",
   "main": "gulpfile.js",
   "dependencies": {
-    "jquery.scrollto": "^2.1.2"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
