@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('ejs/head'); %>
+</head>
+
+<body>
+    <!-- Main -->
+    <%- include('ejs/header'); %>
+
+    <div class="content">
+        <video src="videos/test.mp4" controls preload="preload"></video>
+    </div>
+
+    <%- include('ejs/footer'); %>
+
+    <!-- Plugins: 插件暂时没有打包到一起，一是打包顺序问题，二是准备建立一个CDN插件库，模块化 -->
+    <script src="scripts/plugins/jquery-1.12.4.min.js"></script>
+    <script src="scripts/plugins/jquery.mousewheel.min.js"></script>
+    <script src="scripts/plugins/jquery.scrollTo.min.js"></script>
+    <script src="scripts/plugins/soundjs-NEXT.min.js"></script>
+    <script src="scripts/plugins/preloadjs-NEXT.min.js"></script>
+    <script src="scripts/plugins/TweenMax.min.js"></script>
+    <script src="scripts/plugins/ScrollMagic.min.js"></script>
+    <script src="scripts/plugins/animation.gsap.min.js"></script>
+
+    <!-- Custom -->
+    <script src="scripts/bundle.min.js"></script>
+</body>
+
+</html>

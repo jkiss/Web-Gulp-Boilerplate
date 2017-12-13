@@ -17,7 +17,8 @@ var runSequence = require('run-sequence'),
         'clean',
         'server',
         'open',
-        'browserify'
+        'browserify',
+        'ejs'
     ]);
 
 /**
@@ -30,7 +31,7 @@ gulp.task('dev', (cb)=>{
         ['movemedia'],
         ['stylus'],
         ['browserify'],
-        ['html'],
+        ['ejs'],
         ['server'],
         ['open'],
         cb);
@@ -46,7 +47,7 @@ gulp.task('default', (cb)=>{
         ['imgmin'],
         ['stylus'],
         ['browserify'],
-        ['html'],
+        ['ejs'],
         cb);
 });
 
@@ -60,7 +61,7 @@ gulp.task('build', (cb)=>{
         ['imgmin'],
         ['stylus'],
         ['browserify'],
-        ['html'],
+        ['ejs'],
         cb);
 });
 
@@ -68,7 +69,7 @@ gulp.task('build', (cb)=>{
  * 启动Gulp，开始监听！:)
  */
 gulp.task('watch', ['dev'], ()=>{
-    gulp.watch(['./rev/**/*.json', './src/*.html'], ['html']);
+    gulp.watch(['./rev/**/*.json', './src/*.ejs'], ['ejs']);
     gulp.watch('./src/scripts/*.js', ['browserify']);
     gulp.watch('./src/stylus/*.styl', ['stylus']);
     gulp.watch(['./src/scripts/plugins/**/*', './src/media/**/*'], ['static']);

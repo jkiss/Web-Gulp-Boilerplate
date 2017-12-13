@@ -1,6 +1,6 @@
 {
   "name": "cgtn-fex",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "main": "gulpfile.js",
   "dependencies": {
     "jquery.scrollto": "^2.1.2"
@@ -16,6 +16,7 @@
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
+    "gulp-ejs": "^3.1.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-open": "^2.0.0",
     "gulp-plumber": "^1.1.0",

@@ -30,9 +30,9 @@ module.exports = ()=>{
         filename = _filename + '?v=' + _version;
 
         // 返回由gulp-rev-replace替换文件名
-        return filename;  
-      }  
-      return filename;  
+        return filename;
+      }
+      return filename;
     }
 
     return gulp.src(['./src/*.html', './src/pages/*.html'], { 
