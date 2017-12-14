@@ -52,57 +52,8 @@ import './modules/pf_RAF'
     });
 
     /**
-     * Some Sample Code
+     * Your code here
      */
-    /********   ES6 modules   *********/
-    // import {f1, Test} from './modules/test'
-    // f1('Mr.B')
-
-    // let test = new Test('Mr.B')
-    // test.myName();
-
-    /******   Scroll Magic Sample   *******/
-    // var sm_controller = new ScrollMagic.Controller(),
-    //     wipe_animation = new TimelineMax()
-    //         .to('#color_photo', 1, {x: '100%', ease: Linear.easeNone});
-
-    // new ScrollMagic.Scene({
-    //         triggerElement: '.intro-page',
-    //         triggerHook: 'onLeave',
-    //         duration: _win_height
-    //     })
-    //     .setTween(wipe_animation)
-    //     .addTo(sm_controller);
-
-
-    /******   scroll to sample   *******/
-    // _win.scrollTo('#', {
-    //     duration: 300,
-    //     offset: -80
-    // })
-
-    /******   pin header navigation   *******/
-    // var pin_wrapper = $('#pin_wrapper').get(0),
-    //     nav_bar = $('#nav_bar');
-
-    // _win.scroll(function(e){
-    //     if(getBCR(pin_wrapper, 'top') < 0){
-    //         !nav_bar.hasClass('pinned') && nav_bar.addClass('pinned');
-    //     }else{
-    //         nav_bar.hasClass('pinned') && nav_bar.removeClass('pinned');
-    //     }
-    // }).trigger('scroll')
-
-    /*********    sub page template    ********/
-    // var sub_page_html = 
-    //     `<h1 class="title">SLEEPING LAVENDER</h1>
-    //     <p>To improve the quality of sleeping, we designed a interactive night lamp. People can not only play with it before going to bed, but also can comfort by its violet light. lavendern aroma, white noise sound and warm temperature. We hope that it will allow the people who seek peaceful nights to regain sweet dreams.</p>
-    //     <div class="video-wrap">
-    //         <iframe width="100%" height="100%" src="https://www.youtube.com/" frameborder="0" allowfullscreen></iframe>
-    //     </div>
-    //     <img src="images/lavender/lavender11.png" alt="Image">
-    //     <h2>Usage Scenario</h2>
-    //     <img src="images/lavender/lavender12.png" alt="Image">`.trim()
 
     /**
      * 

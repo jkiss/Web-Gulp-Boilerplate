@@ -9,7 +9,6 @@
 var runSequence = require('run-sequence'),
     gulp = require('./gulp')([
         'html',
-        'es6',
         'stylus',
         'imgmin',
         'movemedia',
@@ -17,7 +16,8 @@ var runSequence = require('run-sequence'),
         'clean',
         'server',
         'open',
-        'browserify',
+        'browserify-dev',
+        'browserify-build',
         'ejs'
     ]);
 
@@ -30,7 +30,7 @@ gulp.task('dev', (cb)=>{
         ['static'],
         ['movemedia'],
         ['stylus'],
-        ['browserify'],
+        ['browserify-dev'],
         ['ejs'],
         ['server'],
         ['open'],
@@ -46,7 +46,7 @@ gulp.task('default', (cb)=>{
         ['static'],
         ['imgmin'],
         ['stylus'],
-        ['browserify'],
+        ['browserify-dev'],
         ['ejs'],
         cb);
 });
@@ -60,7 +60,7 @@ gulp.task('build', (cb)=>{
         ['static'],
         ['imgmin'],
         ['stylus'],
-        ['browserify'],
+        ['browserify-build'],
         ['ejs'],
         cb);
 });
@@ -70,7 +70,7 @@ gulp.task('build', (cb)=>{
  */
 gulp.task('watch', ['dev'], ()=>{
     gulp.watch(['./rev/**/*.json', './src/*.ejs', './src/pages/*.ejs'], ['ejs']);
-    gulp.watch('./src/scripts/*.js', ['browserify']);
+    gulp.watch('./src/scripts/*.js', ['browserify-dev']);
     gulp.watch('./src/stylus/*.styl', ['stylus']);
     gulp.watch(['./src/scripts/plugins/**/*', './src/media/**/*'], ['static']);
 
