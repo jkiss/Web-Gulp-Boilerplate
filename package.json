@@ -1,6 +1,6 @@
 {
   "name": "cgtn-fex",
-  "version": "2.2.1",
+  "version": "2.3.1",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {

@@ -55,51 +55,7 @@ import './modules/pf_RAF'
      * Your code here
      */
 
-    /**
-     * 
-     * 
-     */
-    function preload() {
-        var indexID = 0,
-            pre_files = [],
-            loader = new createjs.LoadQueue();
 
-        // add preload images
-        $('body').find('img').each(function (i, e) {
-            pre_files.push({
-                "id": "img" + indexID++,
-                "src": $(e).attr('src')
-            });
-        });
-
-        loader.addEventListener("complete", handleComplete);
-        loader.addEventListener('progress', handleProgress);
-        loader.addEventListener('error', handleError);
-
-        // Start loading
-        loader.loadManifest(pre_files);
-
-        function handleComplete() {
-            // console.log('Loading complete...');
-            resizeAll();
-
-            init_funcs.forEach((e) => {
-                e();
-            });
-
-        }
-
-        function handleProgress(e) {
-            var num = Math.floor(e.progress * 100);
-            console.log(num);
-        }
-
-        function handleError(e) {
-            console.error(e.title);
-            console.dir(e.data);
-        }
-
-    }
 
     /**************      Tool     **************/
     function getBCR(ele, type) {
