@@ -3,7 +3,12 @@
 > 最基本的 Gulp静态页工作流模版，使项目更加统一，便于协作，可根据自身的需求添加、删除部分功能；
 > 欢迎来提 Issues。
 
+# Important: 考虑到开发效率等问题，此Gulp工程不再更新，以后全部使用 [React 15.x + webpack](https://github.com/jkiss/Web-React-Boilerplate) 框架进行专题页开发
+
 # Updates：
+
+#### 2017-1-2:
+1. U: 更新 gulp 监听事件；
 
 #### 2017-12-14:
 1. 将 browserify 拆分为 dev 和 build 两个环境；
