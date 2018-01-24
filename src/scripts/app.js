@@ -11,8 +11,20 @@ import './modules/pf_RAF'
 
 // TODO: Plug-in modular
 // import './plugins/jquery.scrollTo.min'
+import './modules/jquery.mousewheel.min'
+import './modules/jquery.scrollTo.min'
+import './modules/jquery.html5Loader.min'
+import ScrollMagic from 'scrollmagic'
+import './modules/animation.gsap.min'
+
+// GSAP
+import {TweenMax, Power2, TimelineLite} from "gsap";
+//or get to the parts that aren't included inside TweenMax (works as of 1.19.1):
+import Draggable from "gsap/Draggable";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 (function ($, win) {
+    console.log(Draggable)
     /**
      * Public Parameters
      */
