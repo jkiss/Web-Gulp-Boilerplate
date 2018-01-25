@@ -24,7 +24,7 @@ import Draggable from "gsap/Draggable"
 import ScrollToPlugin from "gsap/ScrollToPlugin"
 
 (function ($, win) {
-    console.log(Draggable)
+
     /**
      * Public Parameters
      */
