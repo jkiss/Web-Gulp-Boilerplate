@@ -16,6 +16,7 @@ import './modules/jquery.scrollTo.min'
 import './modules/jquery.html5Loader.min'
 import ScrollMagic from 'scrollmagic'
 import './modules/animation.gsap.min'
+import 'nk-device'
 
 // GSAP
 import {TweenMax, Power2, TimelineLite} from "gsap";
