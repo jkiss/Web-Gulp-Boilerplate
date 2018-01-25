@@ -3,9 +3,10 @@
 > 最基本的 Gulp静态页工作流模版，使项目更加统一，便于协作，可根据自身的需求添加、删除部分功能；
 > 欢迎来提 Issues。
 
-# Important: 考虑到开发效率等问题，此Gulp工程不再更新，以后全部使用 [React 15.x + webpack](https://github.com/jkiss/Web-React-Boilerplate) 框架进行专题页开发
-
 # Updates：
+
+#### 2017-1-25:
+1. U: 更新依赖包引用方式，除了jquery，其他模块都以 import 方式引入；
 
 #### 2017-1-2:
 1. U: 更新 gulp 监听事件；
@@ -31,6 +32,36 @@
 npm run dev // development mode
 
 npm run build // build deploy folder
+```
+
+### 目录结构：
+```javascript
+├── build  // 部署文件夹
+│   ├── ...
+├── gulp   // Gulp配置文件
+│   ├── index.js
+│   └── tasks
+├── gulpfile.js
+├── gulpfile.js.bkp
+├── node_modules
+│   ├── ...
+├── package-lock.json
+├── package.json
+├── rev
+│   ├── scripts
+│   └── styles
+└── src  // 开发目录
+    ├── ejs          // html模版
+    ├── favicon.png  // logo
+    ├── index.ejs    // 首页
+    ├── media        // 媒体文件夹：图片和视频
+    ├── pages        // 子页面
+    ├── scripts      
+    │   ├── modules  // 通过 import 引入的模块
+    │   ├── plugins  // 通过<script>引入的模块，会move到build文件夹下面
+    │   └── app.js   // 入口js
+    ├── static       // 静态文件，如 word
+    └── stylus       // 样式文件
 ```
 
 ### 特性：

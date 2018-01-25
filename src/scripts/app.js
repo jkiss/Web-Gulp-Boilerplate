@@ -8,21 +8,20 @@
 
 // Polyfill
 import './modules/pf_RAF'
-
-// TODO: Plug-in modular
-// import './plugins/jquery.scrollTo.min'
-import './modules/jquery.mousewheel.min'
-import './modules/jquery.scrollTo.min'
-import './modules/jquery.html5Loader.min'
-import ScrollMagic from 'scrollmagic'
-import './modules/animation.gsap.min'
 import 'nk-device'
 
+// TODO: Plug-in modular
+// let jQuery = require('jquery')
+import 'jquery-mousewheel'
+import 'jquery.scrollto'
+import 'jquery.html5loader'
+import ScrollMagic from 'scrollmagic'
+import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min'
+
 // GSAP
-import {TweenMax, Power2, TimelineLite} from "gsap";
-//or get to the parts that aren't included inside TweenMax (works as of 1.19.1):
-import Draggable from "gsap/Draggable";
-import ScrollToPlugin from "gsap/ScrollToPlugin";
+import {TweenMax, Power2, TimelineLite} from "gsap"
+import Draggable from "gsap/Draggable"
+import ScrollToPlugin from "gsap/ScrollToPlugin"
 
 (function ($, win) {
     console.log(Draggable)

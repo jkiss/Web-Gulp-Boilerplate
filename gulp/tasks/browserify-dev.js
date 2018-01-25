@@ -27,6 +27,7 @@ var gulp       = require('gulp'),
 module.exports = ()=>{
     return browserify({
         entries: './src/scripts/app.js'  //指定打包入口文件
+        ,noParse: ['nk-device']
     })
     .transform(babelify, {
         presets: [

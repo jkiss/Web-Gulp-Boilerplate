@@ -4,6 +4,10 @@
   "main": "gulpfile.js",
   "dependencies": {
     "gsap": "^1.20.3",
+    "jquery": "^1.12.4",
+    "jquery-mousewheel": "^3.1.13",
+    "jquery.html5loader": "^1.8.0",
+    "jquery.scrollto": "^2.1.2",
     "nk-device": "^0.2.7",
     "scrollmagic": "^2.0.5"
   },
