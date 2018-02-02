@@ -39,19 +39,17 @@ import ScrollToPlugin from "gsap/ScrollToPlugin"
         _isMobile = /mobile|android|kindle|silk|midp|phone|(windows .+arm|touch)/.test(_ua),
         tap_event_name = _isMobile ? 'touchend' : 'click';
 
-
     /**
-     * Resize
+     * Push resize function into array
      */
-    function resizeAll(){
+    let RESIZE_FUNS = [],
+        SCROLL_FUNS = []
+
+    RESIZE_FUNS.push(()=>{
         _win_height = _win.height();
         _win_width = _win.width();
 
-    }
-
-    $(win).resize(function () {
-        resizeAll();
-    });
+    })
 
     /**
      * Footer
@@ -68,6 +66,21 @@ import ScrollToPlugin from "gsap/ScrollToPlugin"
      */
 
 
+
+    /************** Resize after push **************/
+    _win.resize(function () {
+        RESIZE_FUNS.forEach((f)=>{
+            f()
+        })
+        console.warn('Window resize...')
+    }).trigger('resize');
+
+    _win.scroll(function () {
+        SCROLL_FUNS.forEach((f)=>{
+            f()
+        })
+        console.warn('Scroll...')
+    }).trigger('scroll');
 
     /**************      Tool     **************/
     function getBCR(ele, type) {
